@@ -1,17 +1,5 @@
 # README
 ## how to use GitHub Desktop
-# personal_assessment DB設計
-
-## evaluations_usersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|evaluation_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :group
-- belongs_to :user
 
 ## usersテーブル
 |Column|Type|Options|
@@ -21,7 +9,6 @@
 |email|string|null: false|
 
 ### Association
-- has_many :evaluations, through: :evaluations_users
 - has_many :evaluations
 - has_many :empoyees
 
@@ -45,6 +32,5 @@
 |user_id|integer|null: false, foreign_key: true|
 |emoloyee_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many :users, through:  :evaluations_users
 - belongs_to :employee
 - belongs_to :user
